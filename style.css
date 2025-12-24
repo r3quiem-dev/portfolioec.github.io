@@ -209,3 +209,74 @@ body {
   background-color: var(--button-hover-bg);
   color: var(--button-hover-text-color);
 }
+
+/* --- BOUTON DOWNLOAD (Docs/CV) --- */
+/* From Uiverse.io by barisdogansutcu - Adapté Theme Noir/Vanille */
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: #F0E7D5; /* Texte Vanille */
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 50;
+}
+
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #111; /* Fond Noir */
+  border: 1px solid rgba(240, 231, 213, 0.2); /* Bordure Vanille subtile */
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button .docs svg {
+    stroke: #F0E7D5; /* Icône Vanille */
+}
+
+.download-button:hover {
+  box-shadow: rgba(240, 231, 213, 0.1) 0px 10px 20px; /* Légère ombre */
+}
+
+/* Partie qui descend au survol */
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: #F0E7D5; /* Fond Vanille */
+  border: 1px solid #F0E7D5;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download svg {
+    stroke: #000000; /* Icône Noire (contraste sur le Vanille) */
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}
+
+@keyframes docs {
+  0% { transform: translateY(0%); }
+  50% { transform: translateY(-15%); }
+  100% { transform: translateY(0%); }
+}
