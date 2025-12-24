@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elouan Camescasse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-300 pb-20 min-h-screen flex justify-center bg-black">
+
+    <div class="fixed top-6 left-0 right-0 flex justify-center z-50">
+        <nav class="relative bg-[#111]/90 border border-[#F0E7D5]/20 rounded-2xl px-2 py-2 flex space-x-1 shadow-2xl backdrop-blur-md">
+            
+            <div id="nav-pill" class="absolute top-2 bottom-2 bg-[#F0E7D5]/10 rounded-xl transition-all duration-300 ease-in-out -z-10 shadow-inner"></div>
+
+            <a href="index.html" class="nav-link px-6 py-2 rounded-xl text-gray-400 text-sm font-medium hover:text-[#F0E7D5] transition-colors z-10">À Propos</a>
+            <a href="projects.html" class="nav-link px-6 py-2 rounded-xl text-gray-400 text-sm font-medium hover:text-[#F0E7D5] transition-colors z-10">Projets</a>
+            <a href="contact.html" class="nav-link px-6 py-2 rounded-xl text-gray-400 text-sm font-medium hover:text-[#F0E7D5] transition-colors z-10">Contact</a>
+        </nav>
+    </div>
+
+    <main id="main-content" class="w-full max-w-5xl pt-28 px-4 mx-auto">
+        <h2 class="text-3xl font-bold text-[#F0E7D5] mb-8 w-fit relative after:content-[''] after:absolute after:h-1 after:bg-[#F0E7D5] after:rounded-full after:-bottom-2 after:left-4 after:right-4">
+            Me contacter
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="flex flex-col gap-4">
+                
+                <div class="bg-[#0a0a0a] border border-white/5 rounded-3xl p-10 flex justify-center items-center card-hover cursor-pointer group flex-1">
+                    <div class="bg-[#111] px-6 py-3 rounded-lg flex items-center space-x-4 group-hover:bg-[#1a1a1a] transition border border-[#F0E7D5]/20">
+    
+                        <button class="btn-copy" onclick="copyEmail('elouan.camescasse@gmail.com')">
+                            <span data-text-end="Copié !" data-text-initial="Copié l'email ?" class="cp-tooltip"></span>
+                            <span>
+                                <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="cp-clipboard">
+                                    <g><path fill="currentColor" d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"></path></g>
+                                </svg>
+                                <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0" height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="cp-check-mark">
+                                    <g><path data-original="#000000" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path></g>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <span class="text-[#F0E7D5] text-sm">elouan.camescasse@gmail.com</span>
+                    </div>
+                </div>
+                
+                <div class="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 flex flex-col justify-center items-center card-hover cursor-pointer flex-1">
+                    
+                    <a href="https://github.com/r3quiem-dev" target="_blank" class="Btn">
+                        <svg class="svgIcon" viewBox="0 0 496 512" height="1.4em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                        <span class="text">Github</span>
+                    </a> 
+
+                    <h3 class="text-xl font-bold text-white">Github Profile</h3>
+                    <p class="text-gray-500 text-sm">+ de mes projets !</p>
+                </div>
+            </div>
+
+            <div class="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 flex flex-col justify-center items-center card-hover cursor-pointer h-full min-h-[250px]">
+                 
+                 <a href="https://www.linkedin.com/in/elouan-camescasse-19ab54384/" target="_blank" class="Btn Btn-large">
+                    
+                    <svg class="svgIcon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path style="fill: #F0E7D5;" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                    </svg>
+                    
+                    <span class="text">LinkedIn</span>
+                </a>
+
+                <h3 class="text-xl font-bold text-white mt-8">LinkedIn</h3>
+                <p class="text-gray-500 text-sm mt-1">Ajouter Moi !</p>
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
