@@ -1,282 +1,338 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-/* --- STYLES DE BASE --- */
+/* navbar */
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #000000; /* Retour au Noir pur */
-    color: #d1d5db; /* Gris clair par défaut (text-gray-300) */
+    background-color: #000000;
+    color: #d1d5db;
 }
 
-/* Scrollbar Vanille */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #F0E7D5; border-radius: 4px; opacity: 0.8; }
-::-webkit-scrollbar-thumb:hover { background: #fff; }
-
-/* Animation des cartes */
-.card-hover {
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-.card-hover:hover {
-    border-color: #F0E7D5; /* Bordure Vanille au survol */
-    transform: translateY(-2px);
+::-webkit-scrollbar {
+    width: 6px;
 }
 
-/* --- NAVBAR --- */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F0E7D5;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
 #nav-pill {
-    z-index: 0; 
+    z-index: 0;
     pointer-events: none;
 }
+
 .nav-link {
     position: relative;
     z-index: 10;
 }
 
-/* --- BOUTON GITHUB & LINKEDIN --- */
+.card-hover {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-hover:hover {
+    border-color: #F0E7D5;
+    transform: translateY(-2px);
+}
+
+/*btn soc link&git */
+
 .Btn {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: .4s;
-  cursor: pointer;
-  position: relative;
-  background-color: #111; /* Fond sombre */
-  overflow: hidden;
-  margin-bottom: 1rem;
-  text-decoration: none;
-}
-
-.svgIcon {
-  transition-duration: .3s;
-}
-
-.svgIcon path {
-  fill: #F0E7D5; /* Icône Vanille par défaut */
-}
-
-.text {
-  position: absolute;
-  color: #000; /* Texte Noir (pour aller sur le fond Vanille) */
-  width: 120px;
-  font-weight: 600;
-  opacity: 0;
-  transition-duration: .4s;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: #111;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    text-decoration: none;
 }
 
 .Btn:hover {
-  width: 110px;
-  transition-duration: .4s;
-  border-radius: 30px;
-  background-color: #F0E7D5; /* Le bouton devient Vanille au survol */
+    width: 110px;
+    border-radius: 30px;
+    background-color: #F0E7D5;
 }
 
-.Btn:hover .text {
-  opacity: 1;
-  transition-duration: .4s;
+.svgIcon {
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: #F0E7D5;
 }
 
 .Btn:hover .svgIcon {
-  opacity: 0;
-  transition-duration: .3s;
+    opacity: 0;
 }
 
-/* Variante Gros Bouton (LinkedIn) */
+.text {
+    position: absolute;
+    color: #000;
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+}
+
 .Btn-large {
     width: 70px;
     height: 70px;
 }
+
 .Btn-large .svgIcon {
     height: 2.2em;
 }
+
 .Btn-large:hover {
     width: 160px;
     border-radius: 35px;
 }
 
-/* --- BOUTON COPIER EMAIL --- */
-.btn-copy {
-  --button-bg: #222;
-  --button-hover-bg: #F0E7D5;
-  --button-text-color: #F0E7D5; /* Texte Vanille */
-  --button-hover-text-color: #000000;
-  --button-border-radius: 10px;
-  --button-diameter: 36px;
-  --button-outline-width: 1px;
-  --button-outline-color: #F0E7D5;
-  
-  /* Tooltip */
-  --tooltip-bg: #F0E7D5;
-  --toolptip-border-radius: 4px;
-  --tooltip-font-family: Menlo, Roboto Mono, monospace;
-  --tooltip-font-size: 12px;
-  --tootip-text-color: #000;
-  --tooltip-padding-x: 7px;
-  --tooltip-padding-y: 7px;
-  --tooltip-offset: 8px;
-}
+/* btn-copy */
 
 .btn-copy {
-  box-sizing: border-box;
-  width: var(--button-diameter);
-  height: var(--button-diameter);
-  border-radius: var(--button-border-radius);
-  background-color: var(--button-bg);
-  color: var(--button-text-color);
-  border: none;
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  flex-shrink: 0;
-}
+    --button-bg: #222;
+    --button-hover-bg: #F0E7D5;
+    --button-text-color: #F0E7D5;
+    --button-hover-text-color: #000000;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    
+    --tooltip-bg: #F0E7D5;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-size: 12px;
+    --tootip-text-color: #000;
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
 
-.btn-copy > .cp-tooltip {
-  position: absolute;
-  opacity: 0;
-  visibility: 0;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font: var(--tooltip-font-size) var(--tooltip-font-family);
-  color: var(--tootip-text-color);
-  background: var(--tooltip-bg);
-  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
-  border-radius: var(--toolptip-border-radius);
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  z-index: 20;
-}
-
-.btn-copy > .cp-tooltip::before {
-  content: attr(data-text-initial);
-}
-
-.btn-copy > .cp-tooltip::after {
-  content: "";
-  position: absolute;
-  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
-  width: var(--tooltip-padding-y);
-  height: var(--tooltip-padding-y);
-  background: inherit;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  z-index: -999;
-  pointer-events: none;
-}
-
-.btn-copy svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.cp-check-mark {
-  display: none;
-}
-
-/* Actions au survol */
-.btn-copy:hover .cp-tooltip,
-.btn-copy:focus:not(:focus-visible) .cp-tooltip {
-  opacity: 1;
-  visibility: visible;
-  top: calc((100% + var(--tooltip-offset)) * -1);
-}
-
-.btn-copy:focus:not(:focus-visible) .cp-tooltip::before {
-  content: attr(data-text-end);
-}
-
-.btn-copy:focus:not(:focus-visible) .cp-clipboard {
-  display: none;
-}
-
-.btn-copy:focus:not(:focus-visible) .cp-check-mark {
-  display: block;
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    flex-shrink: 0;
 }
 
 .btn-copy:hover,
 .btn-copy:focus {
-  background-color: var(--button-hover-bg);
-  color: var(--button-hover-text-color);
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text-color);
 }
 
-/* --- BOUTON DOWNLOAD (Docs/CV) --- */
-/* From Uiverse.io by barisdogansutcu - Adapté Theme Noir/Vanille */
+.btn-copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-copy > .cp-tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) Menlo, Roboto Mono, monospace;
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 20;
+}
+
+.btn-copy > .cp-tooltip::before {
+    content: attr(data-text-initial);
+}
+
+.btn-copy > .cp-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+}
+
+.btn-copy:hover .cp-tooltip,
+.btn-copy:focus:not(:focus-visible) .cp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-tooltip::before {
+    content: attr(data-text-end);
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-clipboard {
+    display: none;
+}
+
+.cp-check-mark {
+    display: none;
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-check-mark {
+    display: block;
+}
+
+/* btn download anim */
+
 .download-button {
-  position: relative;
-  border-width: 0;
-  color: #F0E7D5; /* Texte Vanille */
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 4px;
-  z-index: 50;
+    position: relative;
+    border-width: 0;
+    color: #F0E7D5;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 50;
 }
 
 .download-button .docs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  min-height: 40px;
-  padding: 0 10px;
-  border-radius: 4px;
-  z-index: 1;
-  background-color: #111; /* Fond Noir */
-  border: 1px solid rgba(240, 231, 213, 0.2); /* Bordure Vanille subtile */
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #111;
+    border: 1px solid rgba(240, 231, 213, 0.2);
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .download-button .docs svg {
-    stroke: #F0E7D5; /* Icône Vanille */
+    stroke: #F0E7D5;
 }
 
 .download-button:hover {
-  box-shadow: rgba(240, 231, 213, 0.1) 0px 10px 20px; /* Légère ombre */
+    box-shadow: rgba(240, 231, 213, 0.1) 0px 10px 20px;
 }
 
-/* Partie qui descend au survol */
 .download {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 90%;
-  margin: 0 auto;
-  z-index: -1;
-  border-radius: 4px;
-  transform: translateY(0%);
-  background-color: #F0E7D5; /* Fond Vanille */
-  border: 1px solid #F0E7D5;
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 4px;
+    transform: translateY(0%);
+    background-color: #F0E7D5;
+    border: 1px solid #F0E7D5;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .download svg {
-    stroke: #000000; /* Icône Noire (contraste sur le Vanille) */
+    stroke: #000000;
 }
 
 .download-button:hover .download {
-  transform: translateY(100%);
+    transform: translateY(100%);
 }
 
 .download svg polyline,
 .download svg line {
-  animation: docs 1s infinite;
+    animation: docs 1s infinite;
 }
 
+/* keyframe */
+
 @keyframes docs {
-  0% { transform: translateY(0%); }
-  50% { transform: translateY(-15%); }
-  100% { transform: translateY(0%); }
+    0% { transform: translateY(0%); }
+    50% { transform: translateY(-15%); }
+    100% { transform: translateY(0%); }
 }
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* anim page rzload */
+.anim-left {
+    opacity: 0;
+    animation: slideInLeft 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.anim-right {
+    opacity: 0;
+    animation: slideInRight 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.anim-top {
+    opacity: 0;
+    animation: slideInDown 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.anim-bottom {
+    opacity: 0;
+    animation: slideInUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* timing */
+.delay-1000 { animation-delay: 1s; }
+.delay-1500 { animation-delay: 1.5s; }
+.delay-2000 { animation-delay: 2s; }
+.delay-2500 { animation-delay: 2.5s; }
+.delay-3000 { animation-delay: 3s; }
+.delay-3500 { animation-delay: 3.5s; }
